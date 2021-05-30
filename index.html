@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Code Quiz</title>
+    <link rel="stylesheet" href="./Assets/CSS/style.css">
+</head>
+
+
+<body>
+    <header>
+        <div class="scores">
+            <a id="high-scores">View High Scores</a>
+        </div>
+        <div id="timer" class="timer">
+            Time Remaining: 90
+        </div>
+    </header>
+
+    <section id="start-container" class="start-quiz">
+        <h1>JavaScript Code Quiz</h1>
+        <p>Welcome to the JavaScript Code Quiz! You will have 90 seconds to 
+            try and obtain the highest score on the quiz by answering a series 
+            of questions. Be mindful that incorrect answers will penalize your 
+            remaining time and subtract ten (10) seconds. Your final score will 
+            be equal to your remaining time once the last question is answered. 
+            To begin, click "Start Quiz!"
+        </p>
+        <div class="controls">
+            <button id="start-btn" class="start-btn">Start Quiz!</button>
+        </div>
+    </section>
+
+    <section id="question-containr" class="hide">
+        <h1 id="question">Question</h1>
+        <div id="answer-buttons" class="btn-grid">
+            <button class="btn">A</button>
+            <button class="btn">B</button>
+            <button class="btn">C</button>
+            <button class="btn">D</button>
+        </div>
+        <h2 id="check-answer" class="correct-incorrect hide"></h2>
+        <div class="controls">
+            <button id="next-btn" class="next-btn hide">Next</button>
+        </div>
+    </section>
+
+    <section id="score-container" class="hide">
+        <form id="submit-form">
+            <h3 id="your-score"></h3>
+            <label id="initials-label">Please enter your initials in order to save your score:</label>
+            <input type="text" id="initials-field" maxlength="3" placeholder="Please enter your initials" />
+            <button id="submit-btn">Submit</button>
+        </form>
+    </section>
+
+    <section id="highscores" class="highscores-container hide">
+        <div id="high-scores">
+            <h1 class="centered">High Scores Leaderboard</h1>
+            <div id="highscore" class="highscore highscore-list">
+            </div>
+            <div class="controls">
+                <button id="restart-btn">Restart</button>
+                <button id="clear-btn">Clear Scores</button>
+            </div>
+        </div>
+    </section>
+
+    <!--Links to JavaScript-->
+    <script src="./Assets/JS/script.js"></script>
+    
+</body>
+</html>
