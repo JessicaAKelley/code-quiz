@@ -1,5 +1,5 @@
 // Start quiz with timer set to ninety (90) seconds. Time remaining will also be final score.
-var timeLeft = 3;
+var timeLeft = 90;
 var timerID;
 var timerEl = document.getElementById("timer");
 var startButton = document.getElementById("start-btn");
