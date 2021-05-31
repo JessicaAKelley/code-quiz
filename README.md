@@ -2,7 +2,7 @@
 
 ## Preview:
 
-Check out this [JavaScript code quiz]()!
+Check out this [JavaScript code quiz](https://jessicaakelley.github.io/code-quiz/)!
 
 [![website demo]()
 

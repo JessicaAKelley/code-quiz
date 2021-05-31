@@ -1,5 +1,5 @@
 // Start quiz with timer set to ninety (90) seconds. Time remaining will also be final score.
-var timeLeft = 90;
+var timeLeft = 3;
 var timerID;
 var timerEl = document.getElementById("timer");
 var startButton = document.getElementById("start-btn");
@@ -13,7 +13,7 @@ var viewHighScores = document.getElementById("highscores-link");
 var submitButton = document.getElementById("submit-btn");
 var clearScoreButton = document.getElementById("clear-btn");
 var initialsField = document.getElementById("player-name");
-var restartButton = document.getElementById("restart-btn");
+var returnButton = document.getElementById("return-btn");
 var scoreField = document.getElementById("player-score");
 var scores = JSON.parse(localStorage.getItem("scores")) || [];
 
@@ -114,7 +114,7 @@ function selectAnswer(e) {
     }
 };
 
-// Check and show correct answer by set the buttons colors
+// Check and show correct answer by the buttons colors
 function setStatusClass(element, correct) {
     clearStatusClass(element)
     if (correct) {
@@ -130,7 +130,7 @@ function clearStatusClass(element) {
     element.classList.remove("incorrect");
 };
 
-// Save scores
+// Save score
 function saveScore() {
     clearInterval(timerID);
     timerEl.textContent = "Time: " + timeLeft;
@@ -153,6 +153,9 @@ var loadScores = function () {
     // Convert scores from string into array
     savedScores = JSON.parse(savedScores);
     var initials = document.querySelector("#initials-field").value;
+
+    
+
     var newScore = {
         score: timeLeft,
         initials: initials
@@ -204,11 +207,18 @@ viewHighScores.addEventListener("click", showHighScores);
 submitButton.addEventListener("click", function (event) {
     event.preventDefault()
     var initials = document.querySelector("#initials-field").value;
+    
+    if (initials.length != 3) {
+        alert("Sorry, invalid. You must input three characters!");
+        return;
+    }
+
     showHighScores(initials);
+
 });
 
-// Restart or reload the page
-restartButton.addEventListener("click", function () {
+// Return or reload the page
+returnButton.addEventListener("click", function () {
     window.location.reload();
 });
 
