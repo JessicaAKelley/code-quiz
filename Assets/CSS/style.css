@@ -87,7 +87,7 @@ button:hover {
   background-color: var(--correct-color);
 }
 
-.btn-wrong {
+.btn-incorrect {
   background-color: var(--tertiary-color);
 }
 
@@ -119,7 +119,7 @@ input[type="text"] {
   border: 1px solid var(--correct-color);
 }
 
-@media screen and (max-width 575px) {
+@media screen and (max-width: 575px) {
   .btn-grid {
     grid-template-columns: repeat(1, auto);
     gap: 0;
