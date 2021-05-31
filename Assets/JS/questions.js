@@ -12,7 +12,7 @@ var questions = [
     { 
         question: "Which of the following is NOT a JavaScript data type?", 
         answers: [
-            { text: "Float", correct: false },
+            { text: "Boolean", correct: false },
             { text: "Undefined", correct: false },
             { text: "Number", correct: false },
             { text: "Float", correct: true }

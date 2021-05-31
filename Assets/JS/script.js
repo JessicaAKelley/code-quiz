@@ -28,12 +28,14 @@ nextButton.addEventListener("click", () => {
 
 // Countdown timer
 function timeTick() {
-    timeLeft--;
     timerEl.textContent = "Time: " + timeLeft;
     if (timeLeft <= 0) {
         saveScore();
     }
-}
+    else {
+        timeLeft--;
+    }
+};
 
 // Start quiz
 function startGame() {
