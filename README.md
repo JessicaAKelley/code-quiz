@@ -4,7 +4,7 @@
 
 Check out this [JavaScript code quiz](https://jessicaakelley.github.io/code-quiz/)!
 
-[![website demo](docs/codequiz.mov)](https://media.giphy.com/media/rdsXFb9tmDxQaECimY/giphy.gif)
+[![website demo](docs/codequiz.gif)](https://media.giphy.com/media/rdsXFb9tmDxQaECimY/giphy.gif)
 
 ## The Task:
 
